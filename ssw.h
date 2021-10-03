@@ -5,7 +5,7 @@ int txt;
 int x;
 int y;
 };
-
+ 
 extern unsigned long LHEX(char v[7]); /* These could be regular longs */
 extern unsigned long HEX(char v[7]);  /* but don't want to change now */
 extern unsigned long RGB(int r, int g, int b);
