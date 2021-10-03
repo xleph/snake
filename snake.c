@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include "ssw.h"
 #include "bezier.h"
-
+ 
 int main() {
 srand(64);
 struct cache c;
