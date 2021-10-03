@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
-#include <ssw.h>
+#include "ssw.h"
 #include "bezier.h"
 
 int main() {
@@ -106,7 +106,6 @@ RegionFill(0, 0, 400, 300, RGB(0, 0, 0), 0);
 		ysnake[i] = ysnake[i - 1];
 		xsnake[i + 1] = 0;
 		ysnake[i + 1] = 0;
-		printf("%d\n", i);
 		}
 		
 		for (i = 0; xsnake[i]; i++) {

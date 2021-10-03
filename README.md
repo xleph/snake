@@ -5,7 +5,7 @@ A rather rudimentary game with a rather rudimentary twist
   ## By Hand:
   compile ssw
   
-  `gcc -c ssw.c -o ssw.o`
+  `gcc -c ssw.c -o ssw.o -lX11`
 
   compile bezier.c
   

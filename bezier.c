@@ -1,4 +1,4 @@
-#include <ssw.h>
+#include "ssw.h"
 
 #define uint unsigned int
 #define uchar unsigned char
