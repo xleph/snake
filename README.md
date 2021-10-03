@@ -1,6 +1,6 @@
 # Snake
 A rather rudimentary game with a rather rudimentary twist
-
+ 
 # Setting Up Camp:
   ## By Hand:
   compile ssw
