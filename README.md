@@ -37,5 +37,5 @@ A large portion of the code is my own spare the:
 I stolen this from Quake III source code, but found a better magic constant
 
 ## drawcurve():
-Something out of a ongoing project that I thought could be adapted here
+Something out of a ongoing project of mine that I thought could be adapted here
 
