@@ -30,7 +30,7 @@ RegionFill(0, 0, 400, 300, RGB(0, 0, 0), 0);
 	RegionFill(0, 0, WW(0), WH(0), RGB(0, 0, 0), 0);
 	usleep(100000);	
 	secsize = WW(0)/40;
-	RegionScarf(secsize, secsize, WW(0)-2*secsize, WH(0)-2*secsize, RGB(255, 255, 255), 0);
+	RegionScarf(secsize, secsize, WW(0)-2*secsize, WW(0)*3/4-2*secsize, RGB(255, 255, 255), 0);
 
 		while (Pend(0)) {
 		Eve(&c, 0);
@@ -111,13 +111,11 @@ RegionFill(0, 0, 400, 300, RGB(0, 0, 0), 0);
 		for (i = 0; xsnake[i]; i++) {
 		xsnak[i] = xsnake[i] * secsize;
 		ysnak[i] = ysnake[i] * secsize;
-//		RegionFill(xsnake[i]*secsize, ysnake[i]*secsize, secsize, secsize, RGB(255, 255, 255), 0);
 		}
 
 	xsnak[i + 1] = 0;
 	ysnak[i + 1] = 0;
 
-//	drawcurve(RGB(0, 255, 255), xsnak, ysnak, i, secsize, i*secsize*secsize, 0);
 		for (i = 0; xsnake[i]; i++) {
 		xsnak[i]+=secsize/2;
 		ysnak[i]+=secsize/2;
