@@ -1,5 +1,7 @@
 # Snake
 A rather rudimentary game with a rather rudimentary twist
+
+![](img/snek.png)
  
 # Setting Up Camp:
   ## By Hand:
@@ -19,10 +21,9 @@ A rather rudimentary game with a rather rudimentary twist
   `chmod +x deploy && ./deploy`
   
 # Enjoying:
-There are a few known bugs:
+There area few known bugs:
 
-bezier curves with 32 or more control points will start
-gravitating towaards the origin
+Severe lag loading in bezier curves over 20 points long
 
 The snake isn't exactly *supposed* to have a mouth
 
