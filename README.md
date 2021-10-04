@@ -17,11 +17,11 @@ A rather rudimentary game with a rather rudimentary twist
   
   `gcc ssw.o bezier.o snake.c -o snake -lX11`
 
-  ## Install Script:
+  ## Or Via Install Script:
   `chmod +x deploy && ./deploy`
   
 # Enjoying:
-There area few known bugs:
+There are a few known bugs:
 
 Severe lag loading in bezier curves over 20 points long
 
