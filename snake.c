@@ -5,7 +5,9 @@
 #include "bezier.h"
  
 int main() {
-srand(64);
+int seed, add;
+seed = (int)&add;
+srand(seed);
 struct cache c;
 char xsnake[255];
 char ysnake[255];
@@ -23,7 +25,7 @@ char xp = rand()%38 + 1;
 char yp = rand()%28 + 1;
 XI(0, "Snek", "Snek", 400, 300, 0, 0, 0);
 Eve(&c, 0);
-RegionFill(0, 0, 400, 300, RGB(0, 0, 0), 0);
+RegionFill(0, 0, WW(0), WH(0), RGB(0, 0, 0), 0);
 
 	while (1) {
 
@@ -88,6 +90,8 @@ RegionFill(0, 0, 400, 300, RGB(0, 0, 0), 0);
 		i++;
 		}
 
+		j = i;
+
 		while (i) {
 			if (xsnake[0]==xsnake[i]&&ysnake[0]==ysnake[i]) {
 			goto gg;
@@ -96,8 +100,18 @@ RegionFill(0, 0, 400, 300, RGB(0, 0, 0), 0);
 		}
 
 		if (xsnake[0]==xp&&ysnake[0]==yp) {
-		xp = rand()%38 + 1;
-		yp = rand()%28 + 1;
+			while (i < j) {
+				xp = rand()%38 + 1;
+				yp = rand()%28 + 1;
+				i = 0;
+				while (xsnake[i++]) {
+					if (xsnake[i]==xp&&ysnake[i]==yp) {
+					break;
+					}
+				}
+				
+			}
+				
 		i = 2;
 			while (xsnake[i]) {
 			i++;
@@ -120,9 +134,8 @@ RegionFill(0, 0, 400, 300, RGB(0, 0, 0), 0);
 		xsnak[i]+=secsize/2;
 		ysnak[i]+=secsize/2;
 		}
-	drawcurve(RGB(0, 255, 255), xsnak, ysnak, i, secsize, i*secsize*secsize, 0);
+	drawcurve(RGB(0, 255, 255), xsnak, ysnak, i, secsize, (i*secsize)>>1, 0);
 	RegionFill(xp*secsize, yp*secsize, secsize, secsize, RGB(255, 255, 255), 0);
-
 	}
 gg:
 Clean(0);
