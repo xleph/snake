@@ -31,13 +31,13 @@ tc = (float)1.0/adjpow(size);
 int xc;
 int yc;
 
-	for (t = 0; (uint)t==0; t+=tc+tc*(t>0.25||t>0.75)) {
+	for (t = 0; (uint)t==0; t+=tc) {
 	xslice[0] = 1;
 	yslice[0] = 1;
 	xc = 1;
 		while (xc < n) {
 		xslice[xc] = t * xslice[xc - 1] * (n - xc) / xc;
-		yslice[xc] = t * yslice[xc - 1] * (n - xc) / xc;
+		yslice[xc] = xslice[xc];
 		xc++;
 		}
 	xc = 0;
@@ -62,10 +62,8 @@ int yc;
 		xc = -1*sec/2;
 		while (xc < sec/2 + 1) {
 		yc = (sec*sec/4-xc*xc)*FISR(sec*sec/4-xc*xc);
-		RegionFill((uint)totx+xc, (uint)toty+yc, 1, 1, rgb, win);
-		RegionFill((uint)totx+xc, (uint)toty-yc, 1, 1, rgb, win);
+		RegionFill((uint)(totx+xc), (uint)(toty-yc), 1, (uint)(2*yc), rgb, win);
 		xc++;
 		}
-	RegionFill((uint)totx+xc, (uint)toty, 1, 1, rgb, win);
 	}
 }
