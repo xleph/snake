@@ -139,5 +139,8 @@ RegionFill(0, 0, WW(0), WH(0), RGB(0, 0, 0), 0);
 	}
 gg:
 Clean(0);
+printf("In this world, nothing can be said to be certain... \n");
+usleep(1000000);
+printf("Except Death and Taxes\n");
 XX(0);
 }
